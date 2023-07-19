@@ -1,0 +1,10 @@
+.categoryProducts{
+  background-color: whitesmoke;
+}
+
+.categoriesItem {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-left: 8px solid rgba(255, 100, 51, 1);
+    color: #5b5b5b;
+    position: relative;
+}

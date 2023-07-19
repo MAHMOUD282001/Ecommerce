@@ -1,0 +1,29 @@
+.header {
+  background: rgba(255, 100, 51, 1);
+  font-size: 0.9rem;
+}
+
+.headerTopContent {
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.vertLine::after {
+  content: "";
+  display: block;
+  width: 0.05rem;
+  height: 1.4rem;
+  background-color: #c6c6c6;
+  margin: 0 0.7rem;
+}
+
+@media (max-width: 390px) {
+  .header {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .header {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,27 @@
+.categoriesItem {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-left: 8px solid rgba(255, 100, 51, 1);
+    color: #5b5b5b;
+    position: relative;
+}
+
+.notFoundProduct{
+    padding: 4rem 0;
+}
+
+.notFoundProduct img{
+    width: 400px;
+    height: 400px;
+}
+
+.notFoundProduct a {
+    background-color: rgba(255, 100, 51, 1);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    width: 250px;
+}

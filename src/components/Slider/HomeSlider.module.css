@@ -1,0 +1,14 @@
+.slider{
+    margin-top: 1.5rem;
+}
+
+.sliderItem{
+    height: 400px;
+    width: 100%;
+}
+
+.sliderItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

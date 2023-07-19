@@ -1,0 +1,133 @@
+.cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 5rem 0;
+}
+
+.cart a {
+  background-color: rgba(255, 100, 51, 1);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 250px;
+}
+
+.emptyCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyCart img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+.qtyText{
+  font-size: 1.2rem;
+  color: rgba(255, 100, 51, 1);
+}
+
+.qtyDecrease, .qtyIncrease{
+  padding: .5rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #e1e1e1;
+}
+
+.qtyValue{
+  padding: .25rem 2rem!important;
+  border: 1px solid #e1e1e1;
+}
+
+.deleteBtn{
+  padding: .5rem 1.5rem;
+  border: none;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tr{
+  height: 5rem;
+}
+
+.td{
+  color: #5b5b5b!important;
+}
+
+.price{
+  color: rgba(255, 100, 51, 1)!important;
+}
+
+
+
+.clearCart{
+  padding: 1rem 1.5rem;
+  background-color: #e5e5e5;
+  border: none;
+  color: rgba(255, 100, 51, 1);
+  transition: all .5s ease-in-out;
+}
+
+.clearCart:hover{
+  background-color: rgba(255, 100, 51, 1);
+  color: #fff;
+}
+
+
+.checkout{
+  margin: 1.5rem 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.totalPrice h5{
+  font-size: 1.1rem;
+}
+
+.totalPrice h5 span{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(255, 100, 51, 1);
+}
+
+.checkoutBtn{
+  background-color: rgba(255, 100, 51, 1);
+  padding: .6rem 1.5rem;
+  border: none;
+  color: #fff;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tableContent{
+    width: 700px!important;
+  }
+}
+
+@media (max-width: 500px) {
+  
+  .emptyCart img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .checkout{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

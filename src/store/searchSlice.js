@@ -1,0 +1,52 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { STATUS } from "../utils/status";
+import { BASE_URL } from "../utils/ApiUrl";
+
+const initialState = {
+  searchProducts: [],
+  searchProductsStatus: STATUS.IDLE,
+};
+
+const searchSlice = createSlice({
+  name: "search",
+  initialState,
+  reducers: {
+    clearSearch: (state, action) =>{
+      state.searchProducts = []
+    }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchAsyncSearchProduct.pending, (state) => {
+      state.searchProductsStatus = STATUS.LOADING;
+    });
+    builder.addCase(fetchAsyncSearchProduct.fulfilled, (state, action) => {
+      state.searchProducts = action.payload;
+      state.searchProductsStatus = STATUS.SUCCEEDED;
+    });
+    builder.addCase(fetchAsyncSearchProduct.rejected, (state) => {
+      state.searchProductsStatus = STATUS.FAILED;
+    });
+    
+  },
+});
+
+export const fetchAsyncSearchProduct = createAsyncThunk(
+  "products/fetch",
+  async (searchTerm) => {
+    const response = await fetch(`${BASE_URL}products/search?q=${searchTerm}`);
+
+    const data = await response.json();
+
+    return data.products;
+  }
+);
+
+
+export const {setSearchTerm, clearSearch} = searchSlice.actions
+
+export const getSearchProducts = (state)=> state.search.searchProducts
+
+export const getSearchProductsStatus = (state)=> state.search.searchProductsStatus
+
+
+export default searchSlice.reducer;
