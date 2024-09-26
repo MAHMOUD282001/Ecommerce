@@ -75,10 +75,10 @@ function Navbar() {
           </div>
 
           <ul className="d-flex align-items-center gap-3 my-2 fw-light">
-            {categories.slice(0, 5).map((category, index) => (
+            {categories?.slice(0, 5).map((category, index) => (
               <li key={index}>
-                <Link to={`category/${category}`} className="nav-link text-capitalize">
-                  {category}
+                <Link to={`category/${category.slug}`} className="nav-link text-capitalize">
+                  {category.Name}
                 </Link>
               </li>
             ))}

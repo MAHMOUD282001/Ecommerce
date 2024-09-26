@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { STATUS } from "../utils/status";
 import { BASE_URL } from "../utils/ApiUrl";
+import axios from "axios";
 
 const initialState = {
   categories: [],

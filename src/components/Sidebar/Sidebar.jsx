@@ -17,8 +17,9 @@ function Sidebar() {
 
   useEffect(() => {
     dispatch(fetchAsyncCategories());
-  }, [dispatch]);
-
+  }, []);
+  
+  
   return (
     <aside
       className={`${style.sidebar} ${isSidebarOn ? style.hideSidebar : ""}`}
@@ -36,13 +37,13 @@ function Sidebar() {
       </div>
       
       <ul className="d-flex align-items-center flex-column gap-3 mt-2 fw-light">
-          {categories.map((category, index) => (
+          {categories?.map((category, index) => (
             <li key={index} className={`${style.category}`}>
               <Link
-                to={`category/${category}`}
+                to={`category/${category.slug}`}
                 className={`${style.catLink} text-capitalize`}
               >
-                {category}
+                {category.name}
               </Link>
             </li>
           ))}

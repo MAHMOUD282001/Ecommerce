@@ -44,9 +44,9 @@ export const fetchAsyncProducts = createAsyncThunk(
   "products/fetch",
   async (limit) => {
     const response = await fetch(`${BASE_URL}products?limit=${limit}`);
-
+    
     const data = await response.json();
-
+    
     return data.products;
   }
 );
